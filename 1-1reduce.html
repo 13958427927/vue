@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 利用reduce 求 1-100的和
+      let arr = Array.from(Array(101), (val, key) => key); //第二个参数作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组 // console.log(arr)
+      function sumArr(arr) {
+        return arr.reduce((t, v) => t + v, 0); //t,累计器完成计算的返回值;v,当前元素
+      }
+      console.log(sumArr(arr));
+    </script>
+    <script>
+      let arr1 = [];
+      for (let i = 1; i <= 100; i++) {
+        arr1.push(i);
+      }
+      let sum = arr1.reduce(function (acc, item) {
+        return (acc += item);
+      });
+      console.log(sum);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+export const y=() => console.log('我是轮播图'); 

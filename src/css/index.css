@@ -1,0 +1,8 @@
+
+body .p2 {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+}
+/* 下包 npm install --save-dev mini-css-extract-plugin */
+/* 1.设置css样式 */

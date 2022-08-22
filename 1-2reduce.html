@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let url = "http://www.baidu.com/?name=zhangsan&age=18&sex=nan";
+      function process(url) {
+        let arr = url.split('?').slice(1).join().replace(/=/g, '&').split('&');
+        return arr.reduce(function (acc, item, index, arr) {
+          if (index % 2 == 0) {
+            acc[item] = arr[index + 1];
+          }
+          return acc;
+        }, {});
+      }
+      const url = process('http://www.baidu.com/?name=zhangsan&age=18&sex=nan');
+      console.log(url); // 输出:  { name:"zhangsan",age:18,sex:nan }
+    </script>
+  </body>
+</html>
